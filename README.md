@@ -3,35 +3,13 @@ PiCamera Basic and Advanced Recipes adapted from "official" documentation for tr
 
 ## Basic Recipes
 
-1. Capturing to a file
+1. Capturing to a file - ./basic/CaptureToFile.py
 
-This example is a basic use of the `capture` method in the PiCamera classs. The `capture` method has the following parameters:
+2. Capturing to a stream - ./basic/CaptureToStream.py
 
-- output: the value can a string (i.e. filename) or an object that has a `write` method; if this parameter is omitted then the image data is written to a buffer where overflow constraints are the responsibility of the client code.
+3. Capturing to a PIL Image - ./basic/CaptureToPIL.py
 
-- format: the value can a string or a MIME-type; if this parameter is omitted then the format is deduced from the filetype extension otherwise an exception, `PiCameraValueError` is raised. The supported formats are JPEG, PNG, GIF, BMP, YUV, RGB, RGBA, BGR, BGRA and RAW.
-
-- use_video_port: the value is boolean and defaults to `False` whereby the higher quality image port is used.
-
-- resize: a two element tuple specifying the width and height of the image if the default value None needs to be overriden
-
-- splitter_port: see PiCamera documentation if you really need to use this parameter
-
-- bayer: if the value is `True` then the Exif metadata receives the raw bayer data from the camera's sensor
-
-- options: if the format is "jpeg" then the addtional parameters are:
-
-- quality: an integer from 1 to 100 representing the quality of the image; the default value is 85.
-
-- restart: the restart intervval for the encoder.
-
-- thumbnail: the size and quality of the thumbnail image as a tuple `(width, height, quality)` with the default being `(64,48,35)`; if the value is `None` then no thumbnail is prepared.
-
-2. Capturing to a stream
-
-3. Capturing to a PIL Image
-
-4. Capturing resized images
+4. Capturing resized images - ./basic/CatpureResizedImage.py
 
 5. Capturing consistent images
 
